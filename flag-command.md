@@ -32,6 +32,10 @@ const fetchOptions = () => {
  
  This escapes and wins the game.
 
- <img width="1916" height="1077" alt="flag1" src="https://github.com/user-attachments/assets/87bbd18d-1920-493c-974a-fccc1597d587" />
+ Remediation
+ - Do not trust client-side code to mask sensitive information. Instead, reduct the sensitive information before serving it to the client-side.
+ - Enforce authorization checks for access to sensitive information.
+
+<img width="1916" height="1077" alt="flag1" src="https://github.com/user-attachments/assets/87bbd18d-1920-493c-974a-fccc1597d587" />
  
 <img width="1196" height="1020" alt="secret-command" src="https://github.com/user-attachments/assets/e4b0fe85-3acd-4ffc-8986-f6d4bb07a66e" />
