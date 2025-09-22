@@ -41,6 +41,9 @@ Add the above to the existing configuration file and change only the  Version pa
     <UpdateURL>https://satellite-updates.hackthebox.org/firmware/1.33.7/download</UpdateURL>
 </FirmwareUpdateConfig>
 ```
+Remediation
+- Do not try to sanitise user input. Instead, block DOCTYPE and External Entities. If the parser cannot process DOCTYPE and External Entities, there is no XXE vlnerability.
+  
 <img width="1190" height="1065" alt="Jailbreak2" src="https://github.com/user-attachments/assets/7e5da865-6f41-4d21-aec0-28c90f6e9cee" />
 <img width="1205" height="1073" alt="Jailbreak3" src="https://github.com/user-attachments/assets/f0fd712b-55d7-42e8-8faf-ca4794f8bb33" />
 
