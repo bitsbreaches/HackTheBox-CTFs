@@ -2,6 +2,7 @@ Flag command is a browser-based game about escaping a forest by selecting one of
 However, there is no way to escape the forest even after selecting all visible options. So the trick is to look for an invisible option. 
 This was a tricky one but easier than the previous 2, Jailbreak and TimeKORP,
 
+## Solution
 Thetrick is in inspecting the javascript to see where requests are being sent. They are being sent to `/api/monitor` and `/api/options`
 
 ```
@@ -32,7 +33,7 @@ const fetchOptions = () => {
  
  This escapes and wins the game.
 
- Remediation
+ ## Remediation
  - Do not trust client-side code to mask sensitive information. Instead, reduct the sensitive information before serving it to the client-side.
  - Enforce authorization checks for access to sensitive information.
 
