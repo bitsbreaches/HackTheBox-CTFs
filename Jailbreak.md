@@ -4,6 +4,7 @@ This was the most promising entry point through
 - Reverse Shell Spawning, and
 - XXE
   
+## Solution
 Since there is no logic to execute commands, command injection and reverse shell does not work. 
 The trick, the trick therefore is to use XXE and return the file information in the Version parameter since it is the only one that is reflected back to the user.
 The payload is below
@@ -41,7 +42,7 @@ Add the above to the existing configuration file and change only the  Version pa
     <UpdateURL>https://satellite-updates.hackthebox.org/firmware/1.33.7/download</UpdateURL>
 </FirmwareUpdateConfig>
 ```
-Remediation
+## Remediation
 - Do not try to sanitise user input. Instead, block DOCTYPE and External Entities. If the parser cannot process DOCTYPE and External Entities, there is no XXE vlnerability.
   
 <img width="1190" height="1065" alt="Jailbreak2" src="https://github.com/user-attachments/assets/7e5da865-6f41-4d21-aec0-28c90f6e9cee" />
